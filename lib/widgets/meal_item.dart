@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:mealapp_withprovider/data/dummy_data.dart';
 import 'package:mealapp_withprovider/models/meal.dart';
 import 'package:mealapp_withprovider/screens/single_meal_screen.dart';
@@ -43,12 +44,16 @@ class MealItem extends StatelessWidget {
         onTap: () => _singleMealItem(context, meal),
         child: Stack(
           children: [
-            FadeInImage(
-              placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(meal.imageUrl),
-              fit: BoxFit.cover,
-              height: 200,
-              width: double.infinity,
+            Hero(
+              //uniqu tag
+              tag: meal.id,
+              child: FadeInImage(
+                placeholder: MemoryImage(kTransparentImage),
+                image: NetworkImage(meal.imageUrl),
+                fit: BoxFit.cover,
+                height: 200,
+                width: double.infinity,
+              ),
             ),
             Positioned(
               bottom: 0,
