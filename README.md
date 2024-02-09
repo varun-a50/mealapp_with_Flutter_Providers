@@ -6,7 +6,9 @@ https://api.flutter.dev/flutter/widgets/AnimatedAlign-class.html
 IMPLICIT ANIMATION _______________________________________
 
 Hero() is used for animating widget across screens
+-------------------------------------------------------------------------------------------------------------
 single_meal_screen.dart
+
  Hero(
                 tag: meal.id,
                 child: Image.network(
@@ -39,10 +41,11 @@ Widget build(BuildContext context) {
                 width: double.infinity,
               ),
             ),
-
+----------------------------------------------------------------------------------------------
 
 Tween<>(begins: , ends,), Tween(begins: , ends,), OffSet()
 -----
+--------------------------------------------------------------------------------------------------
  final favouriteMeals = ref.watch(favouriteMealProvider);
     final isFavorite = favouriteMeals.contains(meal);
     return Scaffold(
